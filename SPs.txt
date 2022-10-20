@@ -1,0 +1,27 @@
+CREATE PROC SP_CONSULTA1
+    @tipoExamen varchar(20),
+    @fechaDesde datetime,
+    @fechaHasta datetime,
+    @tecnicatura varchar(50)
+
+as
+    SELECT a.apellido + ', ' + a.nombre 'Alumno',AVG(nota) 'Promedio',te.descripcion 'TipodeExamen' , FORMAT(MIN(e.fecha),'dd/MM/yyyy') 'FechaDelPrimerExamenElegido'
+     ,COUNT(id_detalle)'CantidadDeExamenesElegidosRendidos'
+FROM examenes e join detalle_examenes de on e.id_examen = de.id_examen
+                join Alumnos a on A.id_alumno = de.id_alumno
+                join tecnicaturas t on t.id_tecnicatura = a.id_tecnicatura
+                join tipos_examenes te on e.id_tipo_examen = te.id_tipo_examen
+WHERE a.id_alumno IN (SELECT de1.id_alumno
+                   FROM detalle_examenes de1 join examenes e2 on e2.id_examen = de1.id_examen
+                    WHERE e2.fecha between @fechaDesde and @fechaHasta AND te.descripcion = @tipoExamen AND t.descripcion = @tecnicatura)
+GROUP BY a.apellido + ', ' + a.nombre, te.descripcion
+HAVING COUNT(id_detalle)>=2
+ORDER BY 2 DESC,5 DESC
+
+CREATE PROC SP_CONSULTA_TECNICATURAS
+as
+    select * from tecnicaturas order by 2
+
+CREATE PROC SP_CONSULTA_TIPOS_EXAMENES
+as
+    select * from tipos_examenes order by 2
