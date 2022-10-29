@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPromedio" targetNamespace="http://tempuri.org/dsPromedio.xsd" xmlns:mstns="http://tempuri.org/dsPromedio.xsd" xmlns="http://tempuri.org/dsPromedio.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPromedio" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsPromedio" msprop:Generator_DataSetName="dsPromedio">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Promedio" msprop:Generator_RowEvHandlerName="PromedioRowChangeEventHandler" msprop:Generator_RowDeletedName="PromedioRowDeleted" msprop:Generator_RowDeletingName="PromedioRowDeleting" msprop:Generator_RowEvArgName="PromedioRowChangeEvent" msprop:Generator_TablePropName="Promedio" msprop:Generator_RowChangedName="PromedioRowChanged" msprop:Generator_RowChangingName="PromedioRowChanging" msprop:Generator_TableClassName="PromedioDataTable" msprop:Generator_RowClassName="PromedioRow" msprop:Generator_TableVarName="tablePromedio" msprop:Generator_UserTableName="Promedio">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Promedio" msprop:Generator_ColumnPropNameInRow="Promedio" msprop:Generator_ColumnPropNameInTable="PromedioColumn" msprop:Generator_ColumnVarNameInTable="columnPromedio" msprop:Generator_UserColumnName="Promedio" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

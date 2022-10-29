@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace LabParte3.Presentaciones
 {
-    public partial class FormConsulta1B : Form
+    public partial class FormConsulta1 : Form
     {
-        private static FormConsulta1B instancia;
+        private static FormConsulta1 instancia;
         private Gestor gestor;
-        public FormConsulta1B()
+        public FormConsulta1()
         {
             gestor = new Gestor();
             InitializeComponent();
@@ -23,6 +23,8 @@ namespace LabParte3.Presentaciones
 
         private void FormConsulta1B_Load(object sender, EventArgs e)
         {
+            dtpFechaDesde.MaxDate = DateTime.Today;
+            dtpFechaHasta.MaxDate = DateTime.Today;
             cargarCombos();
             this.rvConsulta1.RefreshReport();
             this.rvConsulta1.RefreshReport();
@@ -41,11 +43,11 @@ namespace LabParte3.Presentaciones
             cboTipoExamen.SelectedIndex = -1;
         }
 
-        public static FormConsulta1B ObtenerInstancia()
+        public static FormConsulta1 ObtenerInstancia()
         {
             if (instancia == null)
             {
-                instancia = new FormConsulta1B();
+                instancia = new FormConsulta1();
             }
             return instancia;
         }
@@ -63,26 +65,52 @@ namespace LabParte3.Presentaciones
             }
             else
             {
+                DataTable tabla = new DataTable();
+
                 DateTime fechaDesde = Convert.ToDateTime(dtpFechaDesde.Value.ToString());
                 DateTime fechaHasta = Convert.ToDateTime(dtpFechaHasta.Value.ToString());
                 string tecnicatura = cboTecnicaturas.Text;
                 string tipoExamen = cboTipoExamen.Text;
 
-                DataTable tabla = gestor.consulta1(tipoExamen, tecnicatura, fechaDesde, fechaHasta);
+                if(cboTecnicaturas.Text == "Todas")
+                {
+                    tabla = gestor.consulta1_todos_tec(tipoExamen, fechaDesde, fechaHasta);
+                }
+                if (cboTipoExamen.Text == "Todos")
+                {
+                    tabla = gestor.consulta1_todos_ex(tecnicatura, fechaDesde, fechaHasta);
+                }
+                if (cboTecnicaturas.Text == "Todas" && cboTipoExamen.Text == "Todos")
+                {
+                    tabla = gestor.consulta1_todos(fechaDesde, fechaHasta);
+                }
+                if (cboTecnicaturas.Text != "Todas" && cboTipoExamen.Text != "Todos")
+                {
+                    tabla = gestor.consulta1(tipoExamen,tecnicatura,fechaDesde, fechaHasta);
+                }
 
-                rvConsulta1.LocalReport.DataSources.Clear();
-                rvConsulta1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("dsConsulta11Reporte", tabla));
-                rvConsulta1.RefreshReport();
+
+
+
+                if (tabla.Rows.Count > 0)
+                {
+                    rvConsulta1.LocalReport.DataSources.Clear();
+                    rvConsulta1.LocalReport.DataSources.Add(new Microsoft.Reporting.WinForms.ReportDataSource("dsConsulta11Reporte", tabla));
+                    rvConsulta1.RefreshReport();
+                }
+                else
+                {
+                    rvConsulta1.LocalReport.DataSources.Clear();
+                    rvConsulta1.RefreshReport();
+                    MessageBox.Show("No se encontraron resultados.", "INFO", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("¿Estas seguro que deseas salir?", "SALIR", MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
-            {
-                this.Close();
-            }
+            ObtenerInstancia().Close();
+            VentanaPrincipal.ObtenerInstancia().Show();
         }
     }
 }

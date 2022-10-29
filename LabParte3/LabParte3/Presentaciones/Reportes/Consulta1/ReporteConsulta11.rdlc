@@ -386,7 +386,7 @@
         <DataSetName>dsConsulta11Reporte</DataSetName>
         <Top>1.0287cm</Top>
         <Height>3.44896cm</Height>
-        <Width>19.49599cm</Width>
+        <Width>19.496cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -394,100 +394,11 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.80208in</Height>
+    <Height>1.83333in</Height>
     <Style />
   </Body>
   <Width>7.69109in</Width>
   <Page>
-    <PageHeader>
-      <Height>1.56697cm</Height>
-      <PrintOnFirstPage>true</PrintOnFirstPage>
-      <PrintOnLastPage>true</PrintOnLastPage>
-      <ReportItems>
-        <Line Name="Line1">
-          <Top>0.72912cm</Top>
-          <Height>0cm</Height>
-          <Width>19.49599cm</Width>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line3">
-          <Left>16.38745cm</Left>
-          <Height>1.56696cm</Height>
-          <Width>3.10854cm</Width>
-          <ZIndex>1</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line4">
-          <Left>13.24363cm</Left>
-          <Height>1.56697cm</Height>
-          <Width>3.14382cm</Width>
-          <ZIndex>2</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line5">
-          <Left>9.9587cm</Left>
-          <Height>1.56697cm</Height>
-          <Width>3.28493cm</Width>
-          <ZIndex>3</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line6">
-          <Left>6.67377cm</Left>
-          <Height>1.56697cm</Height>
-          <Width>3.28493cm</Width>
-          <ZIndex>4</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line7">
-          <Left>3.10854cm</Left>
-          <Height>1.56697cm</Height>
-          <Width>3.56523cm</Width>
-          <ZIndex>5</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-        <Line Name="Line8">
-          <Top>0.07056cm</Top>
-          <Height>1.49641cm</Height>
-          <Width>3.10854cm</Width>
-          <ZIndex>6</ZIndex>
-          <Style>
-            <Border>
-              <Style>Solid</Style>
-            </Border>
-          </Style>
-        </Line>
-      </ReportItems>
-      <Style>
-        <Border>
-          <Style>None</Style>
-        </Border>
-        <BackgroundColor>Yellow</BackgroundColor>
-      </Style>
-    </PageHeader>
     <PageFooter>
       <Height>1.03187cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
@@ -513,7 +424,7 @@
           </Paragraphs>
           <rd:DefaultName>Textbox11</rd:DefaultName>
           <Top>0.17639cm</Top>
-          <Left>15.72599cm</Left>
+          <Left>15.5968cm</Left>
           <Height>0.6cm</Height>
           <Width>3.77cm</Width>
           <Style>

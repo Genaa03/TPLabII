@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConsulta3" targetNamespace="http://tempuri.org/dsConsulta2.xsd" xmlns:mstns="http://tempuri.org/dsConsulta2.xsd" xmlns="http://tempuri.org/dsConsulta2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConsulta3" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dsConsulta3" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsConsulta3">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Consulta3" msprop:Generator_RowClassName="Consulta3Row" msprop:Generator_RowEvHandlerName="Consulta3RowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta3RowDeleted" msprop:Generator_RowDeletingName="Consulta3RowDeleting" msprop:Generator_RowEvArgName="Consulta3RowChangeEvent" msprop:Generator_TablePropName="Consulta3" msprop:Generator_RowChangedName="Consulta3RowChanged" msprop:Generator_UserTableName="Consulta3" msprop:Generator_RowChangingName="Consulta3RowChanging" msprop:Generator_TableClassName="Consulta3DataTable" msprop:Generator_TableVarName="tableConsulta3">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Alumno" msprop:Generator_UserColumnName="Alumno" msprop:Generator_ColumnPropNameInTable="AlumnoColumn" msprop:Generator_ColumnPropNameInRow="Alumno" msprop:Generator_ColumnVarNameInTable="columnAlumno" type="xs:string" minOccurs="0" />
+              <xs:element name="DNI" msprop:Generator_UserColumnName="DNI" msprop:Generator_ColumnPropNameInTable="DNIColumn" msprop:Generator_ColumnPropNameInRow="DNI" msprop:Generator_ColumnVarNameInTable="columnDNI" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaDeNacimiento" msprop:Generator_UserColumnName="FechaDeNacimiento" msprop:Generator_ColumnPropNameInTable="FechaDeNacimientoColumn" msprop:Generator_ColumnPropNameInRow="FechaDeNacimiento" msprop:Generator_ColumnVarNameInTable="columnFechaDeNacimiento" type="xs:string" minOccurs="0" />
+              <xs:element name="PromedioGeneral" msprop:Generator_UserColumnName="PromedioGeneral" msprop:Generator_ColumnPropNameInTable="PromedioGeneralColumn" msprop:Generator_ColumnPropNameInRow="PromedioGeneral" msprop:Generator_ColumnVarNameInTable="columnPromedioGeneral" type="xs:string" minOccurs="0" />
+              <xs:element name="Referencia" msprop:Generator_UserColumnName="Referencia" msprop:Generator_ColumnPropNameInTable="ReferenciaColumn" msprop:Generator_ColumnPropNameInRow="Referencia" msprop:Generator_ColumnVarNameInTable="columnReferencia" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

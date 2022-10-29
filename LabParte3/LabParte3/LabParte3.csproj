@@ -68,11 +68,53 @@
     <Compile Include="Datos\Implementaciones\AyudanteDAO.cs" />
     <Compile Include="Datos\Interfaces\IAyudanteDAO.cs" />
     <Compile Include="Dominio\Parametro.cs" />
-    <Compile Include="Presentaciones\FormConsulta1B.cs">
+    <Compile Include="Presentaciones\FormConsulta1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentaciones\FormConsulta1B.Designer.cs">
-      <DependentUpon>FormConsulta1B.cs</DependentUpon>
+    <Compile Include="Presentaciones\FormConsulta1.Designer.cs">
+      <DependentUpon>FormConsulta1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta2.Designer.cs">
+      <DependentUpon>FormConsulta2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta3.Designer.cs">
+      <DependentUpon>FormConsulta3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta6.Designer.cs">
+      <DependentUpon>FormConsulta6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta4.Designer.cs">
+      <DependentUpon>FormConsulta4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta5.Designer.cs">
+      <DependentUpon>FormConsulta5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta7.Designer.cs">
+      <DependentUpon>FormConsulta7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentaciones\FormConsulta8.Designer.cs">
+      <DependentUpon>FormConsulta8.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentaciones\Reportes\Consulta1\dsConsulta11.cs">
       <DependentUpon>dsConsulta11.xsd</DependentUpon>
@@ -81,6 +123,52 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsConsulta11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta2\dsConsulta2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta3\dsConsulta3.cs">
+      <DependentUpon>dsConsulta3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta3\dsConsulta3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta3\dsPromedio.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsPromedio.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta4\dsConsulta4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta5\dsConsulta5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta6\dsConsulta6.cs">
+      <DependentUpon>dsConsulta6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta6\dsConsulta6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta7\dsConsulta7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Presentaciones\Reportes\Consulta8\dsConsulta8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsConsulta8.xsd</DependentUpon>
     </Compile>
     <Compile Include="Presentaciones\VentanaPrincipal.cs">
       <SubType>Form</SubType>
@@ -93,10 +181,38 @@
     <Compile Include="Servicios\Implementaciones\Gestor.cs" />
     <Compile Include="Servicios\Interfaces\IGestor.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="Presentaciones\FormConsulta1B.resx">
-      <DependentUpon>FormConsulta1B.cs</DependentUpon>
+    <EmbeddedResource Include="Presentaciones\FormConsulta1.resx">
+      <DependentUpon>FormConsulta1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta2.resx">
+      <DependentUpon>FormConsulta2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta3.resx">
+      <DependentUpon>FormConsulta3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta6.resx">
+      <DependentUpon>FormConsulta6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta4.resx">
+      <DependentUpon>FormConsulta4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta5.resx">
+      <DependentUpon>FormConsulta5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta7.resx">
+      <DependentUpon>FormConsulta7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentaciones\FormConsulta8.resx">
+      <DependentUpon>FormConsulta8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentaciones\Reportes\Consulta1\ReporteConsulta11.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta2\ReporteConsulta2.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta3\ReporteConsulta3.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta4\ReporteConsulta4.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta5\ReporteConsulta5.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta6\ReporteConsulta6.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta7\ReporteConsulta7.rdlc" />
+    <EmbeddedResource Include="Presentaciones\Reportes\Consulta8\ReporteConsulta8.rdlc" />
     <EmbeddedResource Include="Presentaciones\VentanaPrincipal.resx">
       <DependentUpon>VentanaPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,6 +237,94 @@
     </None>
     <None Include="Presentaciones\Reportes\Consulta1\dsConsulta11.xss">
       <DependentUpon>dsConsulta11.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta2\dsConsulta2.xsc">
+      <DependentUpon>dsConsulta2.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta2\dsConsulta2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta2.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta2\dsConsulta2.xss">
+      <DependentUpon>dsConsulta2.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsConsulta3.xsc">
+      <DependentUpon>dsConsulta3.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsConsulta3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsConsulta3.xss">
+      <DependentUpon>dsConsulta3.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsPromedio.xsc">
+      <DependentUpon>dsPromedio.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsPromedio.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsPromedio.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta3\dsPromedio.xss">
+      <DependentUpon>dsPromedio.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta4\dsConsulta4.xsc">
+      <DependentUpon>dsConsulta4.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta4\dsConsulta4.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta4.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta4\dsConsulta4.xss">
+      <DependentUpon>dsConsulta4.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta5\dsConsulta5.xsc">
+      <DependentUpon>dsConsulta5.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta5\dsConsulta5.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta5.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta5\dsConsulta5.xss">
+      <DependentUpon>dsConsulta5.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta6\dsConsulta6.xsc">
+      <DependentUpon>dsConsulta6.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta6\dsConsulta6.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta6.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta6\dsConsulta6.xss">
+      <DependentUpon>dsConsulta6.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta7\dsConsulta7.xsc">
+      <DependentUpon>dsConsulta7.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta7\dsConsulta7.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta7.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta7\dsConsulta7.xss">
+      <DependentUpon>dsConsulta7.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta8\dsConsulta8.xsc">
+      <DependentUpon>dsConsulta8.xsd</DependentUpon>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta8\dsConsulta8.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsConsulta8.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Presentaciones\Reportes\Consulta8\dsConsulta8.xss">
+      <DependentUpon>dsConsulta8.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

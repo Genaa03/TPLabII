@@ -34,6 +34,7 @@ namespace LabParte3
                 MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
                 this.Close();
+                Application.Exit();
             }
         }
 
@@ -45,13 +46,55 @@ namespace LabParte3
 
         private void consulta1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ObtenerInstancia().Hide();
-            FormConsulta1B.ObtenerInstancia().ShowDialog();
+            this.Hide();
+            FormConsulta1.ObtenerInstancia().ShowDialog();
         }
 
         private void VentanaPrincipal_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void consulta3ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta3.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta2.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta6ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta6.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta4ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta4.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta5ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta5.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta7ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta7.ObtenerInstancia().ShowDialog();
+        }
+
+        private void consulta8ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormConsulta8.ObtenerInstancia().ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace LabParte3.Presentaciones
 {
-    partial class FormConsulta1B
+    partial class FormConsulta1
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsulta1B));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsulta1));
             this.btnMostrar = new System.Windows.Forms.Button();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
@@ -75,7 +75,10 @@
             // 
             // cboTipoExamen
             // 
+            this.cboTipoExamen.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTipoExamen.FormattingEnabled = true;
+            this.cboTipoExamen.Items.AddRange(new object[] {
+            "Todos"});
             this.cboTipoExamen.Location = new System.Drawing.Point(560, 119);
             this.cboTipoExamen.Name = "cboTipoExamen";
             this.cboTipoExamen.Size = new System.Drawing.Size(135, 21);
@@ -113,7 +116,10 @@
             // 
             // cboTecnicaturas
             // 
+            this.cboTecnicaturas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTecnicaturas.FormattingEnabled = true;
+            this.cboTecnicaturas.Items.AddRange(new object[] {
+            "Todas"});
             this.cboTecnicaturas.Location = new System.Drawing.Point(198, 119);
             this.cboTecnicaturas.Name = "cboTecnicaturas";
             this.cboTecnicaturas.Size = new System.Drawing.Size(135, 21);
@@ -142,7 +148,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(351, 576);
+            this.btnSalir.Location = new System.Drawing.Point(338, 928);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(114, 23);
             this.btnSalir.TabIndex = 13;
@@ -156,7 +162,7 @@
             this.rvConsulta1.Location = new System.Drawing.Point(36, 211);
             this.rvConsulta1.Name = "rvConsulta1";
             this.rvConsulta1.ServerReport.BearerToken = null;
-            this.rvConsulta1.Size = new System.Drawing.Size(744, 349);
+            this.rvConsulta1.Size = new System.Drawing.Size(744, 695);
             this.rvConsulta1.TabIndex = 25;
             // 
             // lblEnunciado
@@ -168,11 +174,12 @@
             this.lblEnunciado.TabIndex = 26;
             this.lblEnunciado.Text = resources.GetString("lblEnunciado.Text");
             // 
-            // FormConsulta1B
+            // FormConsulta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 621);
+            this.ClientSize = new System.Drawing.Size(806, 972);
+            this.ControlBox = false;
             this.Controls.Add(this.lblEnunciado);
             this.Controls.Add(this.rvConsulta1);
             this.Controls.Add(this.btnMostrar);
@@ -186,7 +193,7 @@
             this.Controls.Add(this.lblTecnicatura);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSalir);
-            this.Name = "FormConsulta1B";
+            this.Name = "FormConsulta1";
             this.Text = "Consulta N°1";
             this.Load += new System.EventHandler(this.FormConsulta1B_Load);
             this.ResumeLayout(false);

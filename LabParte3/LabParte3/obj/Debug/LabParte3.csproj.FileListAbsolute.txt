@@ -58,4 +58,11 @@ E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\bin
 E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.VentanaPrincipal.resources
 E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.csproj.CopyComplete
-E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta1B.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta3.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta1.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta2.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta6.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta4.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta5.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta7.resources
+E:\Gena\Facultad\Programacion\Laboratorio II\TP\Proyecto\LabParte3\LabParte3\obj\Debug\LabParte3.Presentaciones.FormConsulta8.resources

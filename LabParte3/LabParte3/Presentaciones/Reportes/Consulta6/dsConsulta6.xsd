@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsConsulta6" targetNamespace="http://tempuri.org/dsConsulta6.xsd" xmlns:mstns="http://tempuri.org/dsConsulta6.xsd" xmlns="http://tempuri.org/dsConsulta6.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsConsulta6" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dsConsulta6" msprop:Generator_DataSetName="dsConsulta6">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Consulta6" msprop:Generator_RowEvHandlerName="Consulta6RowChangeEventHandler" msprop:Generator_RowDeletedName="Consulta6RowDeleted" msprop:Generator_RowDeletingName="Consulta6RowDeleting" msprop:Generator_RowEvArgName="Consulta6RowChangeEvent" msprop:Generator_TablePropName="Consulta6" msprop:Generator_RowChangedName="Consulta6RowChanged" msprop:Generator_RowChangingName="Consulta6RowChanging" msprop:Generator_TableClassName="Consulta6DataTable" msprop:Generator_RowClassName="Consulta6Row" msprop:Generator_TableVarName="tableConsulta6" msprop:Generator_UserTableName="Consulta6">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IdExamen" msprop:Generator_ColumnPropNameInRow="IdExamen" msprop:Generator_ColumnPropNameInTable="IdExamenColumn" msprop:Generator_ColumnVarNameInTable="columnIdExamen" msprop:Generator_UserColumnName="IdExamen" type="xs:string" minOccurs="0" />
+              <xs:element name="Materia" msprop:Generator_ColumnPropNameInRow="Materia" msprop:Generator_ColumnPropNameInTable="MateriaColumn" msprop:Generator_ColumnVarNameInTable="columnMateria" msprop:Generator_UserColumnName="Materia" type="xs:string" minOccurs="0" />
+              <xs:element name="PromedioDeCalificacion" msprop:Generator_ColumnPropNameInRow="PromedioDeCalificacion" msprop:Generator_ColumnPropNameInTable="PromedioDeCalificacionColumn" msprop:Generator_ColumnVarNameInTable="columnPromedioDeCalificacion" msprop:Generator_UserColumnName="PromedioDeCalificacion" type="xs:string" minOccurs="0" />
+              <xs:element name="FechaDeExamen" msprop:Generator_ColumnPropNameInRow="FechaDeExamen" msprop:Generator_ColumnPropNameInTable="FechaDeExamenColumn" msprop:Generator_ColumnVarNameInTable="columnFechaDeExamen" msprop:Generator_UserColumnName="FechaDeExamen" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

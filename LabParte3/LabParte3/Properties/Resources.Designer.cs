@@ -68,5 +68,25 @@ namespace LabParte3.Properties {
                 return ResourceManager.GetString("ConexionDB", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_UTN_FRC {
+            get {
+                object obj = ResourceManager.GetObject("Logo-UTN-FRC", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Logo_UTN_FRC1 {
+            get {
+                object obj = ResourceManager.GetObject("Logo-UTN-FRC1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

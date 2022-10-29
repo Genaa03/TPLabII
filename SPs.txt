@@ -1,3 +1,5 @@
+************** CONSULTA 1 **************
+
 CREATE PROC SP_CONSULTA1
     @tipoExamen varchar(20),
     @fechaDesde datetime,
@@ -25,3 +27,222 @@ as
 CREATE PROC SP_CONSULTA_TIPOS_EXAMENES
 as
     select * from tipos_examenes order by 2
+
+create PROC SP_CONSULTA1_TODOS
+    @fechaDesde datetime,
+    @fechaHasta datetime
+
+as
+    SELECT a.apellido + ', ' + a.nombre 'Alumno',AVG(nota) 'Promedio',te.descripcion 'TipodeExamen' , FORMAT(MIN(e.fecha),'dd/MM/yyyy') 'FechaDelPrimerExamenElegido'
+     ,COUNT(id_detalle)'CantidadDeExamenesElegidosRendidos'
+FROM examenes e join detalle_examenes de on e.id_examen = de.id_examen
+                join Alumnos a on A.id_alumno = de.id_alumno
+                join tecnicaturas t on t.id_tecnicatura = a.id_tecnicatura
+                join tipos_examenes te on e.id_tipo_examen = te.id_tipo_examen
+WHERE a.id_alumno IN (SELECT de1.id_alumno
+                   FROM detalle_examenes de1 join examenes e2 on e2.id_examen = de1.id_examen
+                    WHERE e2.fecha between @fechaDesde and @fechaHasta)
+GROUP BY a.apellido + ', ' + a.nombre, te.descripcion
+HAVING COUNT(id_detalle)>=2
+ORDER BY 2 DESC,5 DESC
+
+create PROC SP_CONSULTA1_TODOS_EX
+    @fechaDesde datetime,
+    @fechaHasta datetime,
+    @tecnicatura varchar(50)
+
+as
+    SELECT a.apellido + ', ' + a.nombre 'Alumno',AVG(nota) 'Promedio',te.descripcion 'TipodeExamen' , FORMAT(MIN(e.fecha),'dd/MM/yyyy') 'FechaDelPrimerExamenElegido'
+     ,COUNT(id_detalle)'CantidadDeExamenesElegidosRendidos'
+FROM examenes e join detalle_examenes de on e.id_examen = de.id_examen
+                join Alumnos a on A.id_alumno = de.id_alumno
+                join tecnicaturas t on t.id_tecnicatura = a.id_tecnicatura
+                join tipos_examenes te on e.id_tipo_examen = te.id_tipo_examen
+WHERE a.id_alumno IN (SELECT de1.id_alumno
+                   FROM detalle_examenes de1 join examenes e2 on e2.id_examen = de1.id_examen
+                    WHERE e2.fecha between @fechaDesde and @fechaHasta AND t.descripcion = @tecnicatura)
+GROUP BY a.apellido + ', ' + a.nombre, te.descripcion
+HAVING COUNT(id_detalle)>=2
+ORDER BY 2 DESC,5 DESC
+
+create PROC SP_CONSULTA1_TODOS_TEC
+    @tipoExamen varchar(20),
+    @fechaDesde datetime,
+    @fechaHasta datetime
+
+as
+    SELECT a.apellido + ', ' + a.nombre 'Alumno',AVG(nota) 'Promedio',te.descripcion 'TipodeExamen' , FORMAT(MIN(e.fecha),'dd/MM/yyyy') 'FechaDelPrimerExamenElegido'
+     ,COUNT(id_detalle)'CantidadDeExamenesElegidosRendidos'
+FROM examenes e join detalle_examenes de on e.id_examen = de.id_examen
+                join Alumnos a on A.id_alumno = de.id_alumno
+                join tecnicaturas t on t.id_tecnicatura = a.id_tecnicatura
+                join tipos_examenes te on e.id_tipo_examen = te.id_tipo_examen
+WHERE a.id_alumno IN (SELECT de1.id_alumno
+                   FROM detalle_examenes de1 join examenes e2 on e2.id_examen = de1.id_examen
+                    WHERE e2.fecha between @fechaDesde and @fechaHasta AND te.descripcion = @tipoExamen)
+GROUP BY a.apellido + ', ' + a.nombre, te.descripcion
+HAVING COUNT(id_detalle)>=2
+ORDER BY 2 DESC,5 DESC
+
+************** CONSULTA 2 **************
+
+CREATE PROC CONSULTA2
+    @año INT
+AS
+
+SELECT distinct p.nombre+' '+p.apellido 'Profesor', m.nombre_materia 'Materia', FORMAT(e.fecha, 'dd/MM/yyyy') 'Fecha'
+FROM examenes e JOIN materias m on e.id_materia = m.id_materia
+                JOIN detalle_examenes de on e.id_examen=de.id_examen
+                JOIN materias_profesores mp on mp.id_materia = m.id_materia
+                JOIN profesores p on p.id_profesor=mp.id_profesor
+WHERE YEAR(e.fecha) = @año AND de.nota < (  SELECT AVG (nota)
+                                            FROM detalle_examenes)
+ORDER BY 3,2
+
+************** CONSULTA 3 **************
+
+ALTER procedure Consulta3
+
+    @fecha1 datetime,
+    @fecha2 datetime,
+    @promedio1 int,
+    @promedio2 int
+as
+
+SELECT Nombre + ' ' + Apellido 'Alumno', nro_dni 'DNI', FORMAT(fec_nac,'dd/MM/yyyy') 'FechaDeNacimiento', AVG(nota) 'PromedioGeneral',
+       'ANTES DEL '+CONVERT(varchar(30),year(@fecha1)) 'Referencia'
+FROM Alumnos a JOIN detalle_examenes exa ON a.id_alumno=exa.id_alumno
+WHERE year(fec_nac) < year(@fecha1)
+GROUP BY exa.id_alumno, Nombre, Apellido, fec_nac,nro_dni
+HAVING @promedio1 <= AVG(nota)
+UNION
+SELECT Nombre + ' ' + Apellido 'Alumno', nro_dni 'DNI', FORMAT(fec_nac,'dd/MM/yyyy') 'FechaDeNacimiento', AVG(nota) 'PromedioGeneral',
+       'DESPUES DEL '+CONVERT(varchar(30),year(@fecha2))
+FROM Alumnos a JOIN detalle_examenes exa ON a.id_alumno=exa.id_alumno
+WHERE year(fec_nac) > year(@fecha2)
+GROUP BY exa.id_alumno, Nombre, Apellido, fec_nac,nro_dni
+HAVING @promedio2 <= AVG(nota)
+ORDER BY 4 desc,1
+
+
+CREATE PROC PROMEDIO_GENERAL
+as
+    SELECT AVG(nota) 'Promedio' from detalle_examenes
+
+
+************** CONSULTA 4 **************
+
+CREATE PROC Consulta4
+
+    @estadoAcademico varchar(40),
+    @curso varchar(10)
+
+as
+
+SELECT DISTINCT nombre + SPACE(1) + apellido 'Alumno', c.descripcion 'Curso', ea.descripcion 'EstadoAcademico', m.nombre_materia 'Materia'
+FROM Alumnos a  JOIN alumnos_materias am on a.id_alumno=am.id_alumno
+                JOIN estados_academicos ea on ea.id_estado=am.id_estado
+                JOIN cursos c on c.id_curso=am.id_curso
+                JOIN detalle_examenes de on a.id_alumno=de.id_alumno
+                JOIN examenes e on e.id_examen=de.id_examen
+                JOIN materias m on am.id_materia = m.id_materia
+WHERE  c.descripcion = @curso and ea.descripcion = @estadoAcademico
+            AND a.id_alumno IN (    SELECT a1.id_alumno
+                                    FROM Alumnos a1 JOIN situaciones_lab sl on a1.id_situacion_laboral=sl.id_situacion_laboral
+                                    WHERE sl.descripcion = 'Empleado')
+
+CREATE PROC Consulta4_EstadosAc
+
+as
+
+SELECT * FROM estados_academicos
+
+CREATE PROC Consulta4_Cursos
+
+as
+
+SELECT * FROM cursos
+
+************** CONSULTA 5 **************
+
+CREATE PROC Consulta5
+    @id_materia int
+as
+
+SELECT DISTINCT a.id_alumno 'ID', a.apellido+ ', ' + a.nombre 'Alumno', a.nro_dni 'DNI',
+                pr.apellido+ ', ' + pr.nombre 'Profesor', m.nombre_materia 'Materia'
+FROM alumnos_materias al    JOIN Alumnos a on a.id_alumno=a.id_alumno
+                            JOIN estados_academicos es on es.id_estado=al.id_estado
+                            JOIN materias m on m.id_materia=al.id_materia
+                            JOIN materias_profesores mp on mp.id_materia = m.id_materia
+                            JOIN profesores pr on pr.id_profesor=mp.id_profesor
+                            JOIN tecnicaturas te on te.id_tecnicatura=a.id_tecnicatura
+WHERE es.id_estado=1 and m.id_materia = @id_materia
+and a.id_alumno in( SELECT alu.id_alumno
+                    FROM alumnos_materias alu
+                    WHERE alu.año=year(getdate())-1 and alu.id_estado=3)
+
+CREATE PROC Consulta5_Materias
+@id_tecnicatura int
+as
+select *
+from materias
+where id_tecnicatura = @id_tecnicatura
+
+CREATE PROC Consulta5_Materias_Todas
+as
+select *
+from materias
+
+
+************** CONSULTA 6 **************
+
+CREATE PROC CONSULTA6
+    @fechaDesde datetime,
+    @fechaHasta datetime
+
+AS
+
+SELECT e.id_examen 'IdExamen', m.nombre_materia 'Materia', SUM (de.nota)/ COUNT (de.nota) 'PromedioDeCalificacion', FORMAT(e.fecha,'dd/MM/yyyy') 'FechaDeExamen'
+FROM detalle_examenes de    JOIN examenes e on de.id_examen=e.id_examen
+                            JOIN materias m on e.id_materia=m.id_materia
+                            JOIN tipos_examenes te on te.id_tipo_examen=e.id_tipo_examen
+WHERE te.descripcion NOT LIKE 'Final' and e.fecha between @fechaDesde and @fechaHasta
+GROUP BY e.id_examen, m.nombre_materia, e.fecha
+HAVING SUM(de.nota)/COUNT(de.nota) >= (SELECT AVG(nota)
+                                        FROM detalle_examenes)
+ORDER BY 3 desc,2
+
+
+************** CONSULTA 7 **************
+
+CREATE PROC CONSULTA7
+
+AS
+
+SELECT t.descripcion 'Tecnicatura',YEAR(e.fecha) 'Año', COUNT(a.id_alumno) 'CantidadDeAlumnos', AVG(de.nota) 'Promedio2'
+FROM examenes e JOIN detalle_examenes de on e.id_examen = de.id_examen
+                JOIN materias ma on ma.id_materia = e.id_materia
+                JOIN tecnicaturas t on t.id_tecnicatura = ma.id_tecnicatura
+                JOIN Alumnos a on A.id_alumno = de.id_alumno
+GROUP BY t.descripcion,YEAR(e.fecha)
+HAVING AVG(nota)>(  SELECT AVG(da.nota)
+                    FROM detalle_examenes da)
+ORDER BY 2 DESC,1
+
+************** CONSULTA 8 **************
+
+CREATE PROC CONSULTA8
+
+    @año int
+
+as
+
+SELECT apellido+ ', ' + nombre as 'Alumno', SUM (nota)/ COUNT (id_examen) 'Promedio',al.año 'Año'
+FROM Alumnos a  JOIN alumnos_materias al on al.id_alumno = a.id_alumno
+                JOIN detalle_examenes d on d.id_alumno = a.id_alumno
+WHERE al.año= @año and (apellido LIKE '%[a]%' or nombre LIKE '%[a]%')
+GROUP BY apellido+ ', ' + nombre,al.año
+HAVING SUM(nota)/COUNT(id_examen) > (   SELECT SUM(nota)/COUNT(id_examen)
+                                        FROM detalle_examenes )
+ORDER BY 1

@@ -53,7 +53,7 @@
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(809, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(802, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,42 +99,49 @@
             this.consulta2ToolStripMenuItem.Name = "consulta2ToolStripMenuItem";
             this.consulta2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta2ToolStripMenuItem.Text = "Consulta 2";
+            this.consulta2ToolStripMenuItem.Click += new System.EventHandler(this.consulta2ToolStripMenuItem_Click);
             // 
             // consulta3ToolStripMenuItem
             // 
             this.consulta3ToolStripMenuItem.Name = "consulta3ToolStripMenuItem";
             this.consulta3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta3ToolStripMenuItem.Text = "Consulta 3";
+            this.consulta3ToolStripMenuItem.Click += new System.EventHandler(this.consulta3ToolStripMenuItem_Click);
             // 
             // consulta4ToolStripMenuItem
             // 
             this.consulta4ToolStripMenuItem.Name = "consulta4ToolStripMenuItem";
             this.consulta4ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta4ToolStripMenuItem.Text = "Consulta 4";
+            this.consulta4ToolStripMenuItem.Click += new System.EventHandler(this.consulta4ToolStripMenuItem_Click);
             // 
             // consulta5ToolStripMenuItem
             // 
             this.consulta5ToolStripMenuItem.Name = "consulta5ToolStripMenuItem";
             this.consulta5ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta5ToolStripMenuItem.Text = "Consulta 5";
+            this.consulta5ToolStripMenuItem.Click += new System.EventHandler(this.consulta5ToolStripMenuItem_Click);
             // 
             // consulta6ToolStripMenuItem
             // 
             this.consulta6ToolStripMenuItem.Name = "consulta6ToolStripMenuItem";
             this.consulta6ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta6ToolStripMenuItem.Text = "Consulta 6";
+            this.consulta6ToolStripMenuItem.Click += new System.EventHandler(this.consulta6ToolStripMenuItem_Click);
             // 
             // consulta7ToolStripMenuItem
             // 
             this.consulta7ToolStripMenuItem.Name = "consulta7ToolStripMenuItem";
             this.consulta7ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta7ToolStripMenuItem.Text = "Consulta 7";
+            this.consulta7ToolStripMenuItem.Click += new System.EventHandler(this.consulta7ToolStripMenuItem_Click);
             // 
             // consulta8ToolStripMenuItem
             // 
             this.consulta8ToolStripMenuItem.Name = "consulta8ToolStripMenuItem";
             this.consulta8ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.consulta8ToolStripMenuItem.Text = "Consulta 8";
+            this.consulta8ToolStripMenuItem.Click += new System.EventHandler(this.consulta8ToolStripMenuItem_Click);
             // 
             // ayudaToolStripMenuItem
             // 
@@ -155,7 +162,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 586);
+            this.ClientSize = new System.Drawing.Size(802, 542);
+            this.ControlBox = false;
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VentanaPrincipal";
