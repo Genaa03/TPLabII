@@ -36,15 +36,16 @@
             this.rvConsulta4 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
+            this.lblEnunciado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblConsultaN4
             // 
             this.lblConsultaN4.AutoSize = true;
-            this.lblConsultaN4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblConsultaN4.Location = new System.Drawing.Point(292, 24);
+            this.lblConsultaN4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblConsultaN4.Location = new System.Drawing.Point(283, 9);
             this.lblConsultaN4.Name = "lblConsultaN4";
-            this.lblConsultaN4.Size = new System.Drawing.Size(108, 18);
+            this.lblConsultaN4.Size = new System.Drawing.Size(130, 24);
             this.lblConsultaN4.TabIndex = 0;
             this.lblConsultaN4.Text = "Consulta N°4";
             // 
@@ -52,7 +53,7 @@
             // 
             this.cboEstadoAcademico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboEstadoAcademico.FormattingEnabled = true;
-            this.cboEstadoAcademico.Location = new System.Drawing.Point(173, 74);
+            this.cboEstadoAcademico.Location = new System.Drawing.Point(158, 116);
             this.cboEstadoAcademico.Name = "cboEstadoAcademico";
             this.cboEstadoAcademico.Size = new System.Drawing.Size(121, 21);
             this.cboEstadoAcademico.TabIndex = 1;
@@ -61,7 +62,7 @@
             // 
             this.lblEstadoAcademico.AutoSize = true;
             this.lblEstadoAcademico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstadoAcademico.Location = new System.Drawing.Point(42, 75);
+            this.lblEstadoAcademico.Location = new System.Drawing.Point(27, 118);
             this.lblEstadoAcademico.Name = "lblEstadoAcademico";
             this.lblEstadoAcademico.Size = new System.Drawing.Size(125, 16);
             this.lblEstadoAcademico.TabIndex = 2;
@@ -71,7 +72,7 @@
             // 
             this.lblCurso.AutoSize = true;
             this.lblCurso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCurso.Location = new System.Drawing.Point(319, 75);
+            this.lblCurso.Location = new System.Drawing.Point(304, 118);
             this.lblCurso.Name = "lblCurso";
             this.lblCurso.Size = new System.Drawing.Size(45, 16);
             this.lblCurso.TabIndex = 3;
@@ -81,7 +82,7 @@
             // 
             this.cboCursos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCursos.FormattingEnabled = true;
-            this.cboCursos.Location = new System.Drawing.Point(370, 74);
+            this.cboCursos.Location = new System.Drawing.Point(355, 116);
             this.cboCursos.Name = "cboCursos";
             this.cboCursos.Size = new System.Drawing.Size(121, 21);
             this.cboCursos.TabIndex = 4;
@@ -89,7 +90,7 @@
             // rvConsulta4
             // 
             this.rvConsulta4.LocalReport.ReportEmbeddedResource = "LabParte3.Presentaciones.Reportes.Consulta4.ReporteConsulta4.rdlc";
-            this.rvConsulta4.Location = new System.Drawing.Point(30, 161);
+            this.rvConsulta4.Location = new System.Drawing.Point(30, 155);
             this.rvConsulta4.Name = "rvConsulta4";
             this.rvConsulta4.ServerReport.BearerToken = null;
             this.rvConsulta4.Size = new System.Drawing.Size(636, 246);
@@ -97,7 +98,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(290, 423);
+            this.btnSalir.Location = new System.Drawing.Point(311, 417);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 6;
@@ -110,7 +111,7 @@
             this.btnMostrar.BackColor = System.Drawing.Color.Red;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnMostrar.Location = new System.Drawing.Point(522, 74);
+            this.btnMostrar.Location = new System.Drawing.Point(507, 113);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(176, 27);
             this.btnMostrar.TabIndex = 7;
@@ -118,12 +119,24 @@
             this.btnMostrar.UseVisualStyleBackColor = false;
             this.btnMostrar.Click += new System.EventHandler(this.btnMostrar_Click);
             // 
+            // lblEnunciado
+            // 
+            this.lblEnunciado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnunciado.Location = new System.Drawing.Point(53, 45);
+            this.lblEnunciado.Name = "lblEnunciado";
+            this.lblEnunciado.Size = new System.Drawing.Size(591, 42);
+            this.lblEnunciado.TabIndex = 40;
+            this.lblEnunciado.Text = "Consulta que permite ver los alumnos con un estado academico y curso en particula" +
+    "r, que se encuentran trabajando.";
+            this.lblEnunciado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormConsulta4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(727, 482);
+            this.ClientSize = new System.Drawing.Size(711, 478);
             this.ControlBox = false;
+            this.Controls.Add(this.lblEnunciado);
             this.Controls.Add(this.btnMostrar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.rvConsulta4);
@@ -150,6 +163,7 @@
         private Microsoft.Reporting.WinForms.ReportViewer rvConsulta4;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnMostrar;
+        private System.Windows.Forms.Label lblEnunciado;
     }
 }
 

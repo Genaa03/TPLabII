@@ -117,7 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblEnunciado.Text" xml:space="preserve">
-    <value>Alumnos de una Tecnicatura seleccionada que rindieron un tipo de examen seleccionado entre dos fechas, se va a mostrar el tipo de examen, la primer fecha en la cual realizo ese tipo de examen, la cantidad de examenes de ese tipo que realizo y el nombre completo del alumno junto a su promedio. Siempre y cuando la cantidad de esos examenes sea mayor a 2.</value>
-  </data>
 </root>

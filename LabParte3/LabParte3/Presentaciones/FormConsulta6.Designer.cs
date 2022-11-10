@@ -36,6 +36,7 @@
             this.rvConsulta6 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnSalir = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.lblEnunciado = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnMostrar
@@ -43,7 +44,7 @@
             this.btnMostrar.BackColor = System.Drawing.Color.Red;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMostrar.Location = new System.Drawing.Point(572, 108);
+            this.btnMostrar.Location = new System.Drawing.Point(577, 124);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(183, 32);
             this.btnMostrar.TabIndex = 29;
@@ -54,7 +55,7 @@
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(369, 115);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(374, 131);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(135, 20);
             this.dtpFechaHasta.TabIndex = 28;
@@ -62,7 +63,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(126, 115);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(131, 131);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(135, 20);
             this.dtpFechaDesde.TabIndex = 27;
@@ -71,7 +72,7 @@
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaHasta.Location = new System.Drawing.Point(295, 116);
+            this.lblFechaHasta.Location = new System.Drawing.Point(300, 132);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(53, 18);
             this.lblFechaHasta.TabIndex = 26;
@@ -81,7 +82,7 @@
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaDesde.Location = new System.Drawing.Point(35, 115);
+            this.lblFechaDesde.Location = new System.Drawing.Point(40, 131);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(59, 18);
             this.lblFechaDesde.TabIndex = 25;
@@ -90,7 +91,7 @@
             // rvConsulta6
             // 
             this.rvConsulta6.LocalReport.ReportEmbeddedResource = "LabParte3.Presentaciones.Reportes.Consulta6.ReporteConsulta6.rdlc";
-            this.rvConsulta6.Location = new System.Drawing.Point(38, 184);
+            this.rvConsulta6.Location = new System.Drawing.Point(43, 200);
             this.rvConsulta6.Name = "rvConsulta6";
             this.rvConsulta6.ServerReport.BearerToken = null;
             this.rvConsulta6.Size = new System.Drawing.Size(717, 338);
@@ -98,7 +99,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(340, 550);
+            this.btnSalir.Location = new System.Drawing.Point(345, 566);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(114, 23);
             this.btnSalir.TabIndex = 38;
@@ -117,12 +118,25 @@
             this.lblTitulo.Text = "Consulta N°6";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // lblEnunciado
+            // 
+            this.lblEnunciado.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnunciado.Location = new System.Drawing.Point(40, 48);
+            this.lblEnunciado.Name = "lblEnunciado";
+            this.lblEnunciado.Size = new System.Drawing.Size(692, 58);
+            this.lblEnunciado.TabIndex = 42;
+            this.lblEnunciado.Text = "Consulta que permite ver los examenes con el nombre de la materia y el promedio d" +
+    "el mismo, mientras que no haya sido un final y su promedio sea mayor o igual al " +
+    "promedio de las notas generales.";
+            this.lblEnunciado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // FormConsulta6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(808, 602);
             this.ControlBox = false;
+            this.Controls.Add(this.lblEnunciado);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.rvConsulta6);
@@ -149,5 +163,6 @@
         private Microsoft.Reporting.WinForms.ReportViewer rvConsulta6;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Label lblEnunciado;
     }
 }

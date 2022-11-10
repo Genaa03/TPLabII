@@ -28,7 +28,6 @@ namespace LabParte3.Presentaciones
         {
             nudAño.Maximum = DateTime.Now.Year;
             nudAño.Value = DateTime.Now.Year;
-            this.rvConsulta2.RefreshReport();
         }
 
         private void btnMostrar_Click(object sender, EventArgs e)

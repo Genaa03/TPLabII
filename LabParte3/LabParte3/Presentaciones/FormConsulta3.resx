@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="lblEnunciado.Text" xml:space="preserve">
+    <value>Consulta que permite ver en una misma tabla alumnos que nacieron ANTES de una fecha elegida y que su promedio general sea mayor a un valor ingresado, y a alumnos que nacieron DESPUES de una fecha elegida y su promedio mayor a un valor ingresado.</value>
+  </data>
 </root>

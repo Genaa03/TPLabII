@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormConsulta1));
             this.btnMostrar = new System.Windows.Forms.Button();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +48,7 @@
             this.btnMostrar.BackColor = System.Drawing.Color.Red;
             this.btnMostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMostrar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMostrar.Location = new System.Drawing.Point(612, 165);
+            this.btnMostrar.Location = new System.Drawing.Point(597, 165);
             this.btnMostrar.Name = "btnMostrar";
             this.btnMostrar.Size = new System.Drawing.Size(183, 32);
             this.btnMostrar.TabIndex = 24;
@@ -148,7 +147,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(338, 928);
+            this.btnSalir.Location = new System.Drawing.Point(338, 595);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(114, 23);
             this.btnSalir.TabIndex = 13;
@@ -162,23 +161,25 @@
             this.rvConsulta1.Location = new System.Drawing.Point(36, 211);
             this.rvConsulta1.Name = "rvConsulta1";
             this.rvConsulta1.ServerReport.BearerToken = null;
-            this.rvConsulta1.Size = new System.Drawing.Size(744, 695);
+            this.rvConsulta1.Size = new System.Drawing.Size(744, 358);
             this.rvConsulta1.TabIndex = 25;
             // 
             // lblEnunciado
             // 
-            this.lblEnunciado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEnunciado.Location = new System.Drawing.Point(22, 47);
+            this.lblEnunciado.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEnunciado.Location = new System.Drawing.Point(48, 34);
             this.lblEnunciado.Name = "lblEnunciado";
-            this.lblEnunciado.Size = new System.Drawing.Size(773, 69);
+            this.lblEnunciado.Size = new System.Drawing.Size(708, 70);
             this.lblEnunciado.TabIndex = 26;
-            this.lblEnunciado.Text = resources.GetString("lblEnunciado.Text");
+            this.lblEnunciado.Text = "Consulta que permite ver al junto con su promedio de un tipo de examen determinad" +
+    "o, su primer realizacion de examen y la cantidad de examenes rendidos";
+            this.lblEnunciado.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormConsulta1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(806, 972);
+            this.ClientSize = new System.Drawing.Size(806, 632);
             this.ControlBox = false;
             this.Controls.Add(this.lblEnunciado);
             this.Controls.Add(this.rvConsulta1);
